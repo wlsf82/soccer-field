@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Field</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .field {
+            width: 1000px;
+            height: 600px;
+            background-color: #6ebd6e;
+            position: relative;
+            border: 10px solid white;
+        }
+
+        .center-circle {
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #6ebd6e; /* Overriding background color to match field */
+        }
+
+        .small-center-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white; /* Overriding background color to match field */
+        }
+
+        .penalty-mark,
+        .corner {
+            background-color: white;
+        }
+
+        .penalty-mark {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .penalty-mark.left,
+        .penalty-mark.right {
+            border-radius: 50%;
+        }
+
+        .penalty-mark.left {
+            left: 142px;
+        }
+
+        .penalty-mark.right {
+            right: 142px;
+        }
+
+        .big-goal-area {
+            width: 200px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: white 4px solid;
+        }
+
+        .small-goal-area {
+            width: 90px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: white 4px solid;
+        }
+
+        .half-moon {
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #6ebd6e; /* Overriding background color to match field */
+        }
+
+        .penalty-area {
+            width: 500px;
+            height: 220px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .corner {
+            width: 22px;
+            height: 22px;
+            position: absolute;
+        }
+
+        .corner.top-left,
+        .corner.top-right,
+        .corner.bottom-left,
+        .corner.bottom-right {
+            border-radius: 50%;
+        }
+
+        .corner.top-left {
+            left: -10px;
+            top: -10px;
+        }
+
+        .corner.top-right {
+            right: -10px;
+            top: -10px;
+        }
+
+        .corner.bottom-left {
+            left: -10px;
+            bottom: -10px;
+        }
+
+        .corner.bottom-right {
+            right: -10px;
+            bottom: -10px;
+        }
+
+        .half-line {
+            width: 4px;
+            height: 600px;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+        <div class="center-circle"></div>
+        <div class="small-center-circle"></div>
+
+        <!-- Penalty Marks -->
+        <div class="penalty-mark left"></div>
+        <div class="penalty-mark right"></div>
+
+        <!-- Goal Areas -->
+        <!-- Big Areas -->
+        <div class="big-goal-area" style="left: 0;"></div>
+        <div class="big-goal-area" style="right: 0;"></div>
+        <!-- Small Areas -->
+        <div class="small-goal-area" style="left: 0;"></div>
+        <div class="small-goal-area" style="right: 0;"></div>
+        <!-- Half moon -->
+        <!-- <div class="half-moon" style="left: 0;"></div>
+        <div class="half-moon" style="right: 0;"></div> -->
+
+        <!-- Penalty Areas -->
+        <div class="penalty-area" style="left: 0;"></div>
+        <div class="penalty-area" style="right: 0;"></div>
+
+        <!-- Corner Marks -->
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="half-line"></div>
+    </div>
+</body>
+</html>

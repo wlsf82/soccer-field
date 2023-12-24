@@ -2,4 +2,4 @@
 
 A soccer field written using HTML and CSS.
 
-<img width="500" alt="soccer-field" src="https://github.com/wlsf82/soccer-field/assets/2768415/4fab4194-686f-4949-ad9d-14ed0141055a">
+<img width="500" alt="html-and-css-soccer-field" src="https://github.com/wlsf82/soccer-field/assets/2768415/4b65fc14-9fdf-45f4-b11f-0da54b3511f2">

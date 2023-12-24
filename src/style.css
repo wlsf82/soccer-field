@@ -4,8 +4,8 @@ body {
 
 .field {
   width: 1000px;
-  position: relative;
   border: 10px solid white;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .field,
@@ -27,26 +27,36 @@ body {
 }
 
 .big-goal-area,
-.small-goal-area {
+.small-goal-area,
+.goal {
   border-bottom: 4px solid white;
   border-top: 4px solid white;
 }
 
 .big-goal-area.left,
-.small-goal-area.left {
+.small-goal-area.left,
+.goal.right {
   border-right: 4px solid white;
 }
 
 .big-goal-area.right,
-.small-goal-area.right {
+.small-goal-area.right,
+.goal.left {
   border-left: 4px solid white;
+}
+
+.goal.left {
+  left: -49px;
+}
+
+.goal.right {
+  left: 1000px;
 }
 
 .center-circle,
 .small-center-circle {
   transform: translate(-50%, -50%);
 }
-
 
 .center-circle {
   width: 150px;
@@ -75,6 +85,11 @@ body {
 .small-goal-area {
   width: 90px;
   height: 200px;
+}
+
+.goal {
+  width: 45px;
+  height: 100px;
 }
 
 .half-circle {
@@ -148,7 +163,8 @@ body {
 }
 
 .half-line,
-.center-circle {
+.center-circle,
+.field {
   left: 50%;
 }
 
@@ -159,7 +175,8 @@ body {
 .penalty-mark,
 .big-goal-area,
 .small-goal-area,
-.half-circle {
+.half-circle,
+.goal {
   transform: translateY(-50%);
 }
 
@@ -168,7 +185,9 @@ body {
 .penalty-mark,
 .big-goal-area,
 .small-goal-area,
-.half-circle {
+.half-circle,
+.goal,
+.field {
   top: 50%;
 }
 
@@ -179,6 +198,8 @@ body {
 .penalty-mark,
 .big-goal-area,
 .small-goal-area,
-.half-circle {
+.half-circle,
+.goal,
+.field {
   position: absolute;
 }

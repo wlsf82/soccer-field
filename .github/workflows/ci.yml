@@ -11,6 +11,6 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          command: npx cypress run --browser chrome --record
+          record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

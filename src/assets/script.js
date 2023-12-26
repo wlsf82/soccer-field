@@ -20,13 +20,23 @@ function play() {
   if (randomScoreForA > randomScoreForB) {
     isGremioHymnPlaying = true
     gremioHymn.load()
-    gremioHymn.play()
+    gremioHymn.play().then(() => {
+      console.log('Gremio hymn playback started!')
+    }).catch(error => {
+      console.log('Gremio hymn play was prevend by the following error:')
+      console.log(error)
+    })
   }
 
   if (randomScoreForB > randomScoreForA) {
     isInterHymnPlaying = true
     interHymn.load()
-    interHymn.play()
+    interHymn.play().then(() => {
+      console.log('Inter hymn playback started!')
+    }).catch(error => {
+      console.log('Inter hymn play was prevend by the following error:')
+      console.log(error)
+    })
   }
 
   playButton.innerText = 'Reset'

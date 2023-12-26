@@ -43,10 +43,12 @@ describe('Soccer Game', () => {
 
     cy.get('@scoreAValue').then(scoreA => {
       cy.get('@scoreBValue').then(scoreB => {
-        if (scoreA > scoreB || scoreB > scoreA) {
-          cy.expectPlayingAudio()
+        if (scoreA > scoreB) {
+          cy.expectGremioHymnPlayingAudio()
+        } else if (scoreB > scoreA) {
+          cy.expectInterHymnPlayingAudio()
         } else {
-          cy.log('Tie')
+          cy.log("It's a tie")
         }
       })
     })

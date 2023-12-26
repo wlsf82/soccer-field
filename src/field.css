@@ -203,3 +203,22 @@ body {
 .field {
   position: absolute;
 }
+
+img[alt="soccer-field"] {
+  display: none;
+}
+
+@media (max-width: 480px) { /* Adjust for smaller mobile screens */
+  .field {
+    display: none;
+  }
+
+  img[alt="soccer-field"] {
+    display: block;
+    margin-top: 100px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

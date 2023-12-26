@@ -1,4 +1,9 @@
 const playButton = document.querySelector('.play-button')
+const gremioHymn = document.getElementById('gremio-hymn')
+const interHymn = document.getElementById('inter-hymn')
+
+let isGremioHymnPlaying = false
+let isInterHymnPlaying = false
 
 playButton.addEventListener('click', play)
 
@@ -12,6 +17,18 @@ function play() {
   socreA.innerText = randomScoreForA
   socreB.innerText = randomScoreForB
 
+  if (randomScoreForA > randomScoreForB) {
+    isGremioHymnPlaying = true
+    gremioHymn.load()
+    gremioHymn.play()
+  }
+
+  if (randomScoreForB > randomScoreForA) {
+    isInterHymnPlaying = true
+    interHymn.load()
+    interHymn.play()
+  }
+
   playButton.innerText = 'Reset'
   
   playButton.removeEventListener('click', play)
@@ -19,6 +36,16 @@ function play() {
 }
 
 function reset() {
+  if (isGremioHymnPlaying) {
+    gremioHymn.pause()
+    isGremioHymnPlaying = false
+  }
+
+  if (isInterHymnPlaying) {
+    interHymn.pause()
+    isInterHymnPlaying = false
+  }
+
   socreA.innerText = '0'
   socreB.innerText = '0'
 

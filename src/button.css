@@ -16,4 +16,5 @@
 
 .play-button:hover {
   background-color: #5aaf5a; /* Slightly darker shade on hover */
+  font-size: larger;
 }

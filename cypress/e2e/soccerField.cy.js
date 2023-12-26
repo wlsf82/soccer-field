@@ -1,7 +1,7 @@
 describe('Soccer Game', () => {
-  it('plays a game', () => {
-    cy.visit('./src/index.html')
+  beforeEach(() => cy.visit('./src/index.html'))
 
+  it('plays a game', () => {
     cy.get('.socre-a')
       .as('scoreA')
       .should('be.visible')
@@ -24,5 +24,10 @@ describe('Soccer Game', () => {
 
     cy.get('@scoreA').should('have.text', '0')
     cy.get('@scoreB').should('have.text', '0')
+  })
+
+  it('shows image instead of the real field on mobile viewport', { viewportWidth: 480 }, () => {
+    cy.get('.field').should('not.be.visible')
+    cy.get('img[alt="soccer-field"]').should('be.visible')
   })
 })

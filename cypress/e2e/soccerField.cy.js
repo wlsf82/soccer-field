@@ -2,11 +2,11 @@ describe('Soccer Game', () => {
   beforeEach(() => cy.visit('./src/index.html'))
 
   it('plays a game', () => {
-    cy.get('.socre-a')
+    cy.get('.score-a')
       .as('scoreA')
       .should('be.visible')
       .and('have.text', '0')
-    cy.get('.socre-b')
+    cy.get('.score-b')
       .as('scoreB')
       .should('be.visible')
       .and('have.text', '0')

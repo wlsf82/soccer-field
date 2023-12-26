@@ -7,15 +7,15 @@ let isInterHymnPlaying = false
 
 playButton.addEventListener('click', play)
 
-const socreA = document.querySelector('.socre-a')
-const socreB = document.querySelector('.socre-b')
+const scoreA = document.querySelector('.score-a')
+const scoreB = document.querySelector('.score-b')
 
 function play() {
   const randomScoreForA = Math.floor(Math.random() * 5)
   const randomScoreForB = Math.floor(Math.random() * 5)
 
-  socreA.innerText = randomScoreForA
-  socreB.innerText = randomScoreForB
+  scoreA.innerText = randomScoreForA
+  scoreB.innerText = randomScoreForB
 
   if (randomScoreForA > randomScoreForB) {
     isGremioHymnPlaying = true
@@ -46,8 +46,8 @@ function reset() {
     isInterHymnPlaying = false
   }
 
-  socreA.innerText = '0'
-  socreB.innerText = '0'
+  scoreA.innerText = '0'
+  scoreB.innerText = '0'
 
   playButton.innerText = 'Play'
   playButton.removeEventListener('click', reset)

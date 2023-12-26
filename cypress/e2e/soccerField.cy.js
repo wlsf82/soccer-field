@@ -30,4 +30,29 @@ describe('Soccer Game', () => {
     cy.get('.field').should('not.be.visible')
     cy.get('img[alt="soccer-field"]').should('be.visible')
   })
+
+  it('ensures audio is played and paused on game play and reset', () => {
+    cy.get('.play-button').click()
+
+    cy.get('.score-a')
+      .invoke('text')
+      .as('scoreAValue')
+    cy.get('.score-b')
+      .invoke('text')
+      .as('scoreBValue')
+
+    cy.get('@scoreAValue').then(scoreA => {
+      cy.get('@scoreBValue').then(scoreB => {
+        if (scoreA > scoreB || scoreB > scoreA) {
+          cy.expectPlayingAudio()
+        } else {
+          cy.log('Tie')
+        }
+      })
+    })
+
+    cy.contains('button', 'Reset').click()
+
+    cy.expectPausedAudio()
+  })
 })

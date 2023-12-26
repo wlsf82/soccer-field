@@ -1,0 +1,32 @@
+.scoreboard {
+  display: flex;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #a4d9a4;
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.team-flag {
+  width: 60px;
+  height: 40px;
+  border: 1.5px solid #444;
+}
+
+.score {
+  flex: 0.5;
+}
+
+.vs {
+  flex: 0.2;
+  font-size: 24px;
+}

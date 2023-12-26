@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" type="text/css" href="field.css">
+    <link rel="stylesheet" type="text/css" href="score.css">
     <title>Soccer Field</title>
   </head>
   <body>
+    <div class="scoreboard">
+      <img src="./assets/gremio-flag.png" alt="Grêmio's flag" class="team-flag">
+      <div class="score socre-a">0</div>
+      <div class="vs">x</div>
+      <div class="score socre-b">0</div>
+      <img src="./assets/inter-flag.png" alt="Inter's flag" class="team-flag">
+    </div>
     <div class="field">
       <div class="grass">
         <div class="goal left"></div>
@@ -35,5 +44,7 @@
         <div class="half-line"></div>
       </div>
     </div>
+    <button class="play-button">Play</button>
+    <script type="application/javascript" src="script.js"></script>
   </body>
 </html>

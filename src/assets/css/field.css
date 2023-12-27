@@ -208,7 +208,7 @@ img[alt="soccer-field"] {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1100px) {
   .field {
     display: none;
   }

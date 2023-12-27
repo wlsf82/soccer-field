@@ -5,12 +5,17 @@
   "main": "src/index.html",
   "scripts": {
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:all:but:burn": "cypress run --env grepTags=-@burn,grepOmitFiltered=true",
+    "test:burn": "cypress run --env grepTags=@burn,burn=10,grepOmitFiltered=true",
+    "test:all:but:burn:cloud": "cypress run --record --tag 'all-but-burn' --env grepTags=-@burn,grepOmitFiltered=true",
+    "test:burn:cloud": "cypress run --record --tag 'burn' --env grepTags=@burn,burn=10,grepOmitFiltered=true"
   },
   "keywords": [],
   "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
   "license": "MIT",
   "devDependencies": {
+    "@cypress/grep": "^4.0.1",
     "cypress": "^13.6.2"
   }
 }

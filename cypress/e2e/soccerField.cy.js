@@ -31,7 +31,7 @@ describe('Soccer Game', () => {
     cy.get('img[alt="soccer-field"]').should('be.visible')
   })
 
-  it('ensures audio is played and paused on game play and reset', () => {
+  it('ensures audio is played and paused on game play and reset', { tags: '@burn' }, () => {
     cy.get('.play-button').click()
 
     cy.get('.score-a')

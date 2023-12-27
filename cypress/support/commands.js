@@ -28,7 +28,7 @@ function ensureAudioIsPlaying(audioElements) {
   let audible = false
 
   audioElements.each((i, el) => {
-    if (el.duration > 0 && !el.paused && !el.muted) {
+    if (el.duration > 0 && el.played && !el.paused && !el.muted) {
       audible = true
     }
   })

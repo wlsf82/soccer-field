@@ -15,9 +15,6 @@ Cypress.Commands.add('expectPausedAudio', () => {
     let audible = true
 
     audioElements.each((i, el) => {
-      // console.log(el)
-      // console.log(el.duration, el.paused, el.muted)
-
       if (el.paused || el.muted) {
         audible = false
       }
@@ -31,9 +28,6 @@ function ensureAudioIsPlaying(audioElements) {
   let audible = false
 
   audioElements.each((i, el) => {
-    // console.log(el)
-    // console.log(el.duration, el.paused, el.muted)
-
     if (el.duration > 0 && !el.paused && !el.muted) {
       audible = true
     }

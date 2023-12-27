@@ -29,7 +29,7 @@ function ensureAudioIsPlaying(audioElements) {
 
   if (
     audioElements[0].duration > 0 &&
-    audioElements[0].played &&
+    audioElements[0].played.length &&
     !audioElements[0].paused &&
     !audioElements[0].muted
   ) {

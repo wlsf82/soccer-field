@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  tests:
+  all-but-burn:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -11,6 +11,17 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          record: true
+          command: npm run test:all:but:burn:cloud
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  burn:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run test:burn:cloud
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

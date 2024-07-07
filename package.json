@@ -15,7 +15,7 @@
   "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
   "license": "MIT",
   "devDependencies": {
-    "@cypress/grep": "^4.0.2",
-    "cypress": "^13.11.0"
+    "@cypress/grep": "^4.1.0",
+    "cypress": "^13.13.0"
   }
 }

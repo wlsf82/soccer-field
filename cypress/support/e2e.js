@@ -1,4 +1,4 @@
-import registerCypressGrep from '@cypress/grep/src/support'
+const { register: registerCypressGrep } = require('@cypress/grep')
 registerCypressGrep()
 
 import './commands'

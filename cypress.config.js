@@ -4,7 +4,8 @@ module.exports = defineConfig({
   projectId: 'cw4vna',
   e2e: {
     setupNodeEvents(on, config) {
-      require('@cypress/grep/src/plugin')(config)
+      const { plugin: cypressGrepPlugin } = require('@cypress/grep/plugin')
+      cypressGrepPlugin(config)
       return config
     },
   },
